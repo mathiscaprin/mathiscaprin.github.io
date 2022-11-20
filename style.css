@@ -1,0 +1,50 @@
+h1 {
+    color: #f5f5f7;
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.002em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding-top: 61px;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+p {
+    color: #6e6e73;
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    max-width: 520px;
+    margin: auto;
+    margin-top: 5px;
+
+}
+
+.linkedin {
+    margin-top: .74em;
+}
+
+a, .arrow {
+    color: #2997ff;
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-decoration-line: none;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
+
+.arrow {
+    padding-left: .3em;
+}
