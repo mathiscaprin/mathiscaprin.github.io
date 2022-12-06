@@ -1,50 +1,86 @@
-h1 {
-    color: #f5f5f7;
-    font-size: 48px;
-    line-height: 1.08349;
-    font-weight: 600;
-    letter-spacing: -.002em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    margin: 0;
-    padding-top: 61px;
+:root{
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;    
+    --background-color: #000;
+    --text-color: #f5f5f7;
+    --link-color: #2997ff;
 }
 
 body {
-    background-color: black;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.content{
+    display: block;
+    margin: 50px;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 3em;
 }
 
 p {
-    color: #6e6e73;
-    font-size: 24px;
-    line-height: 1.16667;
+    color: var(--text-color);
+    opacity: .7;
+    font-size: 1.5em;
     font-weight: 400;
-    letter-spacing: .009em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    max-width: 520px;
+    max-width: 75%;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 10px;
 
 }
 
 .linkedin {
-    margin-top: .74em;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-a, .arrow {
-    color: #2997ff;
-    font-size: 19px;
-    line-height: 1.21053;
+a {
+    color: var(--link-color);
+    font-size: 1.2em;
     font-weight: 400;
-    letter-spacing: .012em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    text-decoration-line: none;
+    text-decoration: none;
 }
 
-a:hover {
-  text-decoration-line: underline;
+.linkedinLink{
+    width: fit-content;
+    display: block;
+    margin-right: 5px;
 }
 
-.arrow {
-    padding-left: .3em;
+.linkedinLink::after{
+    content: '';
+    display: block;
+    position: relative;
+    background-color: var(--link-color);
+    height: 2px;
+    width: 0;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.linkedinLink:hover::after{
+    width: 100%;
+}
+
+.blink{
+    animation: blink 1s cubic-bezier(.5,0,.5,1) infinite;
+    color: var(--link-color);
+    font-size: 19px;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
 }
